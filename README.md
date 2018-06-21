@@ -2,6 +2,10 @@
 
 This package provides tools to validate values.
 
+# Installation #
+
+`composer require mirkorap/php-validator`
+
 # Constraint #
 
 All values are validated with the usage of constraints. Below some examples of constraints that you can use:
