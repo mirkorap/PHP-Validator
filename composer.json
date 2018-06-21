@@ -19,9 +19,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Constraint\\": "Constraint/",
-      "FieldValidator\\": "FieldValidator/",
-      "FormValidator\\": "FormValidator/"
+      "PHPValidator\\": "src/"
     }
   },
   "version": "1.0.0",
