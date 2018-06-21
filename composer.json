@@ -1,5 +1,5 @@
 {
-  "name": "mirko/php-validator",
+  "name": "mirkorap/php-validator",
   "description": "A PHP library to validate form fields.",
   "keywords": [
     "php fields validator",
@@ -18,7 +18,7 @@
     {
       "type": "package",
       "package": {
-        "name": "mirko/php-validator",
+        "name": "mirkorap/php-validator",
         "version": "dev-master",
         "source": {
           "type": "git",
@@ -29,7 +29,7 @@
     }
   ],
   "require": {
-    "mirko/php-validator": "dev-master"
+    "mirkorap/php-validator": "dev-master"
   },
   "autoload": {
     "psr-4": {
