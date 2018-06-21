@@ -14,8 +14,22 @@
       "email": "mirkorap16@gmail.com"
     }
   ],
+  "repositories": [
+    {
+      "type": "package",
+      "package": {
+        "name": "mirko/php-validator",
+        "version": "dev-master",
+        "source": {
+          "type": "git",
+          "url": "https://github.com/mirkorap/PHP-Validator.git",
+          "reference": "origin"
+        }
+      }
+    }
+  ],
   "require": {
-    "php": ">=5.4.0"
+    "mirko/php-validator": "dev-master"
   },
   "autoload": {
     "psr-4": {
