@@ -28,9 +28,6 @@
       }
     }
   ],
-  "require": {
-    "mirkorap/php-validator": "dev-master"
-  },
   "autoload": {
     "psr-4": {
       "PHPValidator\\": "src/"
