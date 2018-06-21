@@ -1,6 +1,6 @@
 {
   "name": "mirko/php-validator",
-  "description": "A PHP library to validate form fields",
+  "description": "A PHP library to validate form fields.",
   "keywords": [
     "php fields validator",
     "form validator",
