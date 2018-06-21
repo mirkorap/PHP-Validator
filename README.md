@@ -118,7 +118,7 @@ All of these constraints implement the interface Constraint. So if you want to c
 
 To validate a form you should create your custom form class that extends the abstract base class `FormValidator`. This class accepts an array of `FieldValidator` to validate. So each field should be an instance of `FieldValidator` and should contains a set of constraints. Here a basic example:
 
-    class UniformContactFormValidator extends FormValidator
+    class ContactFormValidator extends FormValidator
     {
 
 	    private $companyName = null;
