@@ -46,23 +46,69 @@ class TypeConstraint extends BasicConstraint
      */
     public function validate($value)
     {
-        switch ($this->getType()) {
+        $type = $this->getType();
+
+        switch ($type) {
             case 'string':
-                return is_string($value);
+                return $this->isString($value);
+            case 'numeric':
+                return $this->isNumeric($value);
             case 'int':
             case 'integer':
-                return is_int($value);
+                return $this->isInt($value);
             case 'float':
-                return is_float($value);
+                return $this->isFloat($value);
+            case 'double':
+                return $this->isDouble($value);
             case 'bool':
             case 'boolean':
-                return is_bool($value);
+                return $this->isBool($value);
             case 'array':
-                return is_array($value);
+                return $this->isArray($value);
             case 'object':
-                return is_a($value, $this->getType());
+                return $this->isObject($value, $type);
         }
 
-        return $this->getMessage();
+        return 'Il tipo di campo specificato non è supportato.';
+    }
+
+    private function isString($value)
+    {
+        return is_string($value) ?: $this->getMessage();
+    }
+
+    private function isNumeric($value)
+    {
+        return is_numeric($value) ?: $this->getMessage();
+    }
+
+    private function isInt($value)
+    {
+        return is_int($value) ?: $this->getMessage();
+    }
+
+    private function isFloat($value)
+    {
+        return is_float($value) ?: $this->getMessage();
+    }
+
+    private function isDouble($value)
+    {
+        return is_double($value) ?: $this->getMessage();
+    }
+
+    private function isBool($value)
+    {
+        return is_bool($value) ?: $this->getMessage();
+    }
+
+    private function isArray($value)
+    {
+        return is_array($value) ?: $this->getMessage();
+    }
+
+    private function isObject($value, $type)
+    {
+        return is_a($value, $type) ?: $this->getMessage();
     }
 }
